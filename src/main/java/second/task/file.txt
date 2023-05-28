@@ -1,0 +1,7 @@
+name age
+alice 21
+ryan 30
+ivan 45
+petr 34
+lily 24
+oleg 16
