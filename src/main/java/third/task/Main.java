@@ -20,7 +20,7 @@ public class Main
                 String[] words = line.split(" ");
                 for (int i = 0; i < words.length; i++)
                 {
-                    if(!words[i].equals(""))
+                    if (!words[i].equals(""))
                     {
                         wordsList.add(words[i]);
                     }
@@ -31,11 +31,10 @@ public class Main
             HashMap<String, Integer> map = new HashMap<>();
             for (String word : wordsList)
             {
-                if(!map.containsKey(word))
+                if (!map.containsKey(word))
                 {
                     map.put(word, 1);
-                }
-                else
+                } else
                 {
                     map.put(word, map.get(word) + 1);
                 }
@@ -43,7 +42,7 @@ public class Main
 
             HashMap<Integer, Object> mapWithValuesOnlyAsKey = new HashMap<>();
 
-            for (Integer item: map.values())
+            for (Integer item : map.values())
             {
                 mapWithValuesOnlyAsKey.put(item, null);
             }
@@ -57,9 +56,9 @@ public class Main
 
             Collections.sort(distinctValues, Collections.reverseOrder());
 
-            for (Integer item: distinctValues)
+            for (Integer item : distinctValues)
             {
-                for (var mapItem: map.entrySet())
+                for (var mapItem : map.entrySet())
                 {
                     if (mapItem.getValue().equals(item))
                     {
